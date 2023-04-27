@@ -16,7 +16,13 @@ const HomeServiceCard = (props) => {
         style={{ borderRadius: '0', objectFit: 'cover' }}
       />
       <div className='card-img-overlay textBoxBackground'>
-        <h5 className='card-title fw-bold fs-2 mt-2 text-white'>
+        <h5
+          className={
+            props.title === 'Interlocking'
+              ? 'card-title fw-bold fs-2 mt-2 text-white text-nowrap'
+              : 'card-title fw-bold fs-2 mt-2 text-white text-wrap'
+          }
+        >
           {props.title}
         </h5>
 
