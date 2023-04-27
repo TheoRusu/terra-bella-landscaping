@@ -10,7 +10,7 @@ const HomeBox = () => {
     navigate('/gallery');
   };
   return (
-    <div className='container'>
+    <div className='container-lg'>
       <div className='row'>
         <div className='col mb-5'>
           <h1 className='text-center mt-5 businessTitle'>
@@ -25,7 +25,7 @@ const HomeBox = () => {
       <hr className='border border-dark border-2 opacity-100' />
 
       <div className='row g-0 mt-5'>
-        <h1 className='slogan text-center mb-3'>
+        <h1 className='text-center mb-5'>
           <u>Services</u>
         </h1>
         <div className='col-md'>
@@ -75,11 +75,16 @@ const HomeBox = () => {
         </div>
       </div>
       <hr className='border border-dark border-2 opacity-100' />
-      <div className='row '>
-        <div className='col mb-5 d-flex justify-content-center'>
-          <Link to={'/contact-us'} className='btn btn-dark'>
-            Contact Us
-          </Link>
+      <div className='row mt-5'>
+        <div className='col mb-5'>
+          <h1 className='text-center mb-5 text-decoration-underline'>
+            Reach out for a quote
+          </h1>
+          <div className='d-flex justify-content-center'>
+            <Link to={'/contact-us'} className='btn btn-lg btn-dark'>
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </div>
