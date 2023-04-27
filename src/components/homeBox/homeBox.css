@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+.slogan {
+  font-family: 'Cookie', cursive;
+  font-size: 50px;
+}
+
+.businessTitle {
+  font-size: 60px;
+}
+
+hr {
+  opacity: 1;
+}
