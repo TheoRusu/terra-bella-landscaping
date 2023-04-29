@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav className='navbar navbar-expand-md navbar-dark'>
-      <div className='container-md'>
+      <div className='container-lg'>
         <div className='d-flex'>
           <Link className='navbar-brand' to='/'>
             <img src='TerrabellaLanscapingLogo1.png' alt='logo' width={'20%'} />
