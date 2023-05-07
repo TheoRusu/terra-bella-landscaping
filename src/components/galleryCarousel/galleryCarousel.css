@@ -12,3 +12,9 @@
   color: black;
   text-align: center;
 }
+
+.galleryImage {
+  height: '35vw';
+  min-height: 50%;
+  object-fit: 'cover';
+}

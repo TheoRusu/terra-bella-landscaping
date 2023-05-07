@@ -10,7 +10,7 @@ const HomeBox = () => {
     navigate('/gallery');
   };
   return (
-    <div className='container-lg'>
+    <div className='container-lg g-0'>
       <div className='row'>
         <div className='col mb-5'>
           <h1 className='text-center mt-5 businessTitle'>
@@ -18,7 +18,7 @@ const HomeBox = () => {
           </h1>
           <h1 className='text-center slogan'>Your Ultimate Dreamscape</h1>
           {/* <img src='Lanscaping.webp' alt='landscaping' width='100%'></img> */}
-          <GalleryCarousel onClick={onGalleryClick} />
+          <GalleryCarousel onClick={onGalleryClick} currentPage={'Home'} />
         </div>
       </div>
 
