@@ -2,23 +2,12 @@ import React, { useState } from 'react';
 import './galleryCarousel.css';
 
 const GalleryCarousel = (props) => {
-  const [mouseEnter, setMouseEnter] = useState(false);
-  const onMouseEnter = () => {
-    console.log(true);
-    setMouseEnter(true);
-  };
-  const onMouseLeave = () => {
-    console.log(false);
-    setMouseEnter(false);
-  };
   return (
     <>
       <div
         id='carouselExampleCaptions'
         className='carousel slide'
         data-bs-ride='carousel'
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
       >
         <div className='carousel-link d-none d-md-block'>
           <h1 className='fw-bold'>Click to view Gallery</h1>
@@ -45,7 +34,13 @@ const GalleryCarousel = (props) => {
             aria-label='Slide 3'
           ></button>
         </div>
-        <div className='carousel-inner galleryBox'>
+        <div
+          className={
+            props.currentPage === 'Home'
+              ? 'carousel-inner galleryBox'
+              : 'carousel-inner'
+          }
+        >
           <GalleryItem
             //   className={'galleryBox'}
             photo={'Main.jpg'}
@@ -104,8 +99,7 @@ const GalleryItem = ({ photo, label, description, onClick }) => {
     >
       <img
         src={photo}
-        className='d-block w-100'
-        style={{ height: '35vw', minHeight: '300px', objectFit: 'cover' }}
+        className='d-block w-100 galleryImage'
         alt='...'
         onClick={onClick}
       />
