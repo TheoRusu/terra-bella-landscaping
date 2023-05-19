@@ -7,10 +7,10 @@ const Navbar = () => {
 
   return (
     <nav className='navbar navbar-expand-md navbar-dark'>
-      <div className='container-lg'>
+      <div className='container-xxl'>
         <div className='d-flex'>
-          <Link className='navbar-brand' to='/'>
-            <img src='TerrabellaLanscapingLogo1.png' alt='logo' width={'20%'} />
+          <Link className='navbar-brand g-0' to='/'>
+            <img src='TerrabellaLandscapingLogo.png' alt='logo' width={'15%'} />
           </Link>
           <button
             className='navbar-toggler'

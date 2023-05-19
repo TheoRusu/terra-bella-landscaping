@@ -4,10 +4,7 @@ import { Link } from 'react-router-dom';
 
 const HomeServiceCard = (props) => {
   return (
-    <div
-      className='card border-1 border-dark text-center'
-      style={{ border: '5px, solid, #000000', borderRadius: '0' }}
-    >
+    <div className='card text-center m-1'>
       <img
         src={props.image}
         className='card-img'

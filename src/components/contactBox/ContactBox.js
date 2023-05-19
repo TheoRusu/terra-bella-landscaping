@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ContactBox = () => {
   return (
-    <div className='container text-center'>
+    <div className='container-xxl text-center'>
       <h1 className=' mt-5'>Contact Us</h1>
       <div className='bg-white border border-dark mt-5 text-center d-inline-block px-5'>
         <h2 className='mt-5 mb-4'>Reach Out For A Quote:</h2>

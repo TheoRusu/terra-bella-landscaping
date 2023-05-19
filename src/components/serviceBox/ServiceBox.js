@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServiceBox = () => {
   return (
-    <div className='container'>
+    <div className='container-xxl'>
       <h1 className='text-center my-5'>Sodding</h1>
       <div className='row g-0'>
         <div className='col-7'>

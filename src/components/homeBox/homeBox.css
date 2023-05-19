@@ -2,13 +2,40 @@
 
 .slogan {
   font-family: 'Cookie', cursive;
-  font-size: 50px;
+  font-size: 3em;
 }
 
 .businessTitle {
-  font-size: 60px;
+  font-size: 4em;
 }
 
 hr {
   opacity: 1;
+}
+
+.image-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-image {
+  width: 100%;
+}
+
+.header-container {
+  position: relative;
+  transition: 0.5s;
+}
+
+.header-container:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+@media (max-width: 767.98px) {
+  .header-image {
+    height: 300px;
+  }
 }
