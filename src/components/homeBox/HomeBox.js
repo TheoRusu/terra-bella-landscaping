@@ -10,24 +10,36 @@ const HomeBox = () => {
     navigate('/gallery');
   };
   return (
-    <div className='container-lg g-0'>
+    <div className='container-xxl g-0'>
       <div className='row'>
-        <div className='col mb-5'>
-          <h1 className='text-center mt-5 businessTitle'>
+        <div className='col mb-5 '>
+          {/* <h1 className='text-center mt-5 businessTitle'>
             Terra Bella Landscaping
           </h1>
-          <h1 className='text-center slogan'>Your Ultimate Dreamscape</h1>
-          {/* <img src='Lanscaping.webp' alt='landscaping' width='100%'></img> */}
-          <GalleryCarousel onClick={onGalleryClick} currentPage={'Home'} />
+          <h1 className='text-center slogan'>Your Ultimate Dreamscape</h1> */}
+
+          <div className='header-container' onClick={onGalleryClick}>
+            <img
+              src='Lawn.jpg'
+              alt='landscaping'
+              className='header-image'
+            ></img>
+
+            <div className='fw-bold image-link text-white'>
+              <h1 className='text-center mt-2 businessTitle'>
+                Terra Bella Landscaping
+              </h1>
+              <h1 className='text-center slogan'>Your Ultimate Dreamscape</h1>
+            </div>
+            {/* <GalleryCarousel onClick={onGalleryClick} currentPage={'Home'} /> */}
+          </div>
         </div>
       </div>
 
       <hr className='border border-dark border-2 opacity-100' />
 
       <div className='row g-0 mt-5'>
-        <h1 className='text-center mb-5'>
-          <u>Services</u>
-        </h1>
+        <h1 className='text-center mb-5'>Services</h1>
         <div className='col-md'>
           <HomeServiceCard
             title={'Sodding'}
@@ -77,9 +89,7 @@ const HomeBox = () => {
       <hr className='border border-dark border-2 opacity-100' />
       <div className='row mt-5'>
         <div className='col mb-5'>
-          <h1 className='text-center mb-5 text-decoration-underline'>
-            Reach out for a quote
-          </h1>
+          <h1 className='text-center mb-5'>Reach out for a quote</h1>
           <div className='d-flex justify-content-center'>
             <Link to={'/contact-us'} className='btn btn-lg btn-dark'>
               Contact Us
