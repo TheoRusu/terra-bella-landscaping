@@ -1,6 +1,6 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // import { Link, useMatch, useResolvedPath } from 'react-router-dom';
-import { Link, animateScroll, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import './navbar.css';
 
 const Navbar = (props) => {

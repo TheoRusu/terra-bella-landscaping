@@ -5,7 +5,7 @@ const GalleryCarousel = (props) => {
   const [galleryItems, setGalleryItems] = useState([]);
   const [galleryIndicators, setGalleryIndicators] = useState([]);
   useEffect(() => {
-    let array = ['InterlockingDriveway.jpg', 'Sodding.jpg', 'Sodding1.jpg'];
+    let array = ['/InterlockingDriveway.jpg', '/Sodding.jpg', '/Sodding1.jpg'];
     setGalleryItems(
       array.map((picture, index) => (
         <GalleryItem active={index === 0 ? 'active' : ''} photoUrl={picture} />
