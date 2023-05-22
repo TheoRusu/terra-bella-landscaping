@@ -13,3 +13,11 @@
 .navbar-nav > li:hover {
   text-decoration: underline;
 }
+
+.nav-item:hover {
+  cursor: pointer;
+}
+
+.nav-item > .active {
+  border-bottom: 1px solid white;
+}

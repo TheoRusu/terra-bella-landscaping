@@ -1,12 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+// import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import { Link, animateScroll, animateScroll as scroll } from 'react-scroll';
 import './navbar.css';
 
-const Navbar = () => {
-  const [activeLink, setActiveLink] = useState('');
+const Navbar = (props) => {
+  const [navHeight, setNavHeight] = useState(0);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setNavHeight(-ref.current.clientHeight);
+      console.log(-ref.current.clientHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const onNavLoad = () => {
+    setNavHeight(-ref.current.clientHeight);
+    console.log(-ref.current.clientHeight);
+  };
 
   return (
-    <nav className='navbar navbar-expand-md navbar-dark'>
+    <nav
+      className='navbar navbar-expand-md navbar-dark'
+      ref={ref}
+      onLoad={onNavLoad}
+    >
       <div className='container-xxl'>
         <div className='d-flex'>
           <Link className='navbar-brand g-0' to='/'>
@@ -23,10 +47,19 @@ const Navbar = () => {
         </div>
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
-            <CustomLink to='/'>Home</CustomLink>
-            <CustomLink to='/gallery'>Gallery</CustomLink>
-            <CustomLink to='/sodding'>Services</CustomLink>
-            <CustomLink to='/contact-us'>Contact Us</CustomLink>
+            <CustomLink to='home' offset={navHeight}>
+              Home
+            </CustomLink>
+
+            <CustomLink to='services' offset={navHeight}>
+              Services
+            </CustomLink>
+            <CustomLink to='gallery' offset={navHeight}>
+              Gallery
+            </CustomLink>
+            <CustomLink to='contact' offset={navHeight}>
+              Contact Us
+            </CustomLink>
           </ul>
         </div>
       </div>
@@ -34,17 +67,22 @@ const Navbar = () => {
   );
 };
 
-const CustomLink = ({ to, children }) => {
-  const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-
+const CustomLink = ({ to, offset, children }) => {
+  // const resolvedPath = useResolvedPath(to);
+  // const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+  // console.log(offset);
   return (
-    <li className='nav-item ms-2 active'>
+    <li className='nav-item ms-2'>
       <Link
-        className={
-          isActive ? 'nav-link active text-nowrap' : 'nav-link text-nowrap'
-        }
+        className={'nav-link text-nowrap'}
+        activeClass='active'
+        // ({to} === 'contact' ?  : to={to})
+        // onClick={animateScroll.scrollToBottom}
         to={to}
+        spy={true}
+        smooth={true}
+        offset={offset}
+        duration={200}
       >
         {children}
       </Link>

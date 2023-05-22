@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const HomeServiceCard = (props) => {
   return (
-    <div className='card text-center m-1'>
+    <div className='card text-center'>
       <img
         src={props.image}
-        className='card-img'
+        className='card-img rounded'
         alt='...'
         height={'350vh'}
         style={{ borderRadius: '0', objectFit: 'cover' }}
@@ -23,13 +23,13 @@ const HomeServiceCard = (props) => {
           {props.title}
         </h5>
 
-        <Link
+        {/* <Link
           to={props.serviceLink}
           className='btn btn-dark btn-lg'
           style={{ marginTop: '55%' }}
         >
           Learn More
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

@@ -9,7 +9,6 @@ import ContactUs from './pages/ContactUs';
 function App() {
   return (
     <>
-      <Navbar />
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/sodding' element={<Sodding />} />
