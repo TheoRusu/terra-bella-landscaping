@@ -2,11 +2,11 @@
 
 .slogan {
   font-family: 'Cookie', cursive;
-  font-size: 3em;
+  font-size: 45px;
 }
 
 .businessTitle {
-  font-size: 4em;
+  font-size: 50px;
 }
 
 hr {
@@ -26,16 +26,49 @@ hr {
 
 .header-container {
   position: relative;
-  transition: 0.5s;
 }
 
-.header-container:hover {
+/* .header-container:hover {
   cursor: pointer;
   opacity: 50%;
-}
+} */
 
 @media (max-width: 767.98px) {
   .header-image {
     height: 300px;
+  }
+}
+
+.contact-col {
+  height: 88.5vh;
+}
+
+.home-image {
+  max-height: 40rem;
+}
+
+@media (min-width: 768px) {
+  .company-message {
+    font-size: 1.5rem;
+  }
+  .slogan {
+    font-size: 3rem;
+  }
+
+  .businessTitle {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .company-message {
+    font-size: 1.5rem;
+  }
+  .slogan {
+    font-size: 5rem;
+  }
+
+  .businessTitle {
+    font-size: 6rem;
   }
 }
