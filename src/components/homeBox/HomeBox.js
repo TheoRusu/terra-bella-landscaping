@@ -1,10 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import HomeServiceCard from '../homeServiceCard/HomeServiceCard';
 import './homeBox.css';
 import GalleryCarousel from '../galleryCarousel/GalleryCarousel';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { BsInstagram, BsTelephone } from 'react-icons/bs';
 import Navbar from '../navbar/Navbar';
+// import asda from '../../../public/';
 
 const HomeBox = () => {
   // const [navHeight, setNavHeight] = useState(0);
@@ -36,7 +37,7 @@ const HomeBox = () => {
 
             <div className='header-container'>
               <img
-                src='Lawn.jpg'
+                src={'/Lawn.jpg'}
                 alt='landscaping'
                 className='header-image'
               ></img>
@@ -62,7 +63,7 @@ const HomeBox = () => {
             breathtaking landscapes.
           </p>
           <img
-            src='Lawnmower.jpg'
+            src='/Lawnmower.jpg'
             className='rounded img-fluid home-image'
             alt='logo'
           />
@@ -79,21 +80,21 @@ const HomeBox = () => {
               title={'Sodding'}
               description={'The best sodding in the country'}
               serviceLink={'/sodding'}
-              image={'Sodding.jpg'}
+              image={'/Sodding.jpg'}
             />
           </div>
           <div className='col-md'>
             <HomeServiceCard
               title={'Interlocking'}
               description={'The best interlocking in the country'}
-              image={'Interlocking.jpg'}
+              image={'/Interlocking.jpg'}
             />
           </div>
           <div className='col-md'>
             <HomeServiceCard
               title={'Planting'}
               description={'The best planting in the country'}
-              image={'Planting.jpg'}
+              image={'/Planting.jpg'}
             />
           </div>
         </div>
@@ -102,21 +103,21 @@ const HomeBox = () => {
             <HomeServiceCard
               title={'Retaining Wall'}
               description={'The best retaining wall in the country'}
-              image={'RetainingWall.jpg'}
+              image={'/RetainingWall.jpg'}
             />
           </div>
           <div className='col-md'>
             <HomeServiceCard
               title={'French Drainage'}
               description={'The best french drainage in the country'}
-              image={'FrenchDrain.jpg'}
+              image={'/FrenchDrain.jpg'}
             />
           </div>
           <div className='col-md'>
             <HomeServiceCard
               title={'Decks and Fences'}
               description={'The best decks and fences in the country'}
-              image={'DecksAndFences.jpg'}
+              image={'/DecksAndFences.jpg'}
             />
           </div>
         </div>
