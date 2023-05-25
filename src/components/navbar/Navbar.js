@@ -10,7 +10,6 @@ const Navbar = (props) => {
   useEffect(() => {
     const handleResize = () => {
       setNavHeight(-ref.current.clientHeight);
-      console.log(-ref.current.clientHeight);
     };
 
     window.addEventListener('resize', handleResize);
@@ -22,7 +21,6 @@ const Navbar = (props) => {
 
   const onNavLoad = () => {
     setNavHeight(-ref.current.clientHeight);
-    console.log(-ref.current.clientHeight);
   };
 
   return (
@@ -34,7 +32,11 @@ const Navbar = (props) => {
       <div className='container-xxl'>
         <div className='d-flex'>
           <Link className='navbar-brand g-0' to='/'>
-            <img src='TerrabellaLandscapingLogo.png' alt='logo' width={'15%'} />
+            <img
+              src={require('../../assets/logos/TerrabellaLandscapingLogo.png')}
+              alt='logo'
+              width={'15%'}
+            />
           </Link>
           <button
             className='navbar-toggler'

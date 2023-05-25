@@ -6,7 +6,7 @@ const HomeServiceCard = (props) => {
   return (
     <div className='card text-center'>
       <img
-        src={props.image}
+        src={require(`../../assets/serviceCards/${props.image}`)}
         className='card-img rounded'
         alt='...'
         height={'350vh'}
