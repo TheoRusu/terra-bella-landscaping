@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './galleryCarousel.css';
-// import images1 from '../../assets/carouselImages/Interlocking1.JPG';
 
 const GalleryCarousel = (props) => {
   const [galleryItems, setGalleryItems] = useState([]);
@@ -13,8 +12,6 @@ const GalleryCarousel = (props) => {
     const images = importAll(
       require.context('../../assets', false, /\.(png|jpe?g|svg)$/)
     );
-    console.log(images);
-    const array = ['InterlockingDriveway.JPG', 'Sodding.jpg', 'Sodding1.jpg'];
     setGalleryItems(
       images.map((picture, index) => (
         <GalleryItem
