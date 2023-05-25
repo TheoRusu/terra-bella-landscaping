@@ -10,7 +10,7 @@ const GalleryCarousel = (props) => {
     }
 
     const images = importAll(
-      require.context('../../assets', false, /\.(png|jpe?g|svg)$/)
+      require.context('../../assets', false, /\.(png|jpe?g|svg)$/i)
     );
     setGalleryItems(
       images.map((picture, index) => (
