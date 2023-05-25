@@ -1,19 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import './galleryCarousel.css';
+// import images1 from '../../assets/carouselImages/Interlocking1.JPG';
 
 const GalleryCarousel = (props) => {
   const [galleryItems, setGalleryItems] = useState([]);
   const [galleryIndicators, setGalleryIndicators] = useState([]);
   useEffect(() => {
-    let array = ['/InterlockingDriveway.jpg', '/Sodding.jpg', '/Sodding1.jpg'];
+    function importAll(r) {
+      return r.keys().map(r);
+    }
+
+    const images = importAll(
+      require.context('../../assets', false, /\.(png|jpe?g|svg)$/)
+    );
+    console.log(images);
+    const array = ['InterlockingDriveway.JPG', 'Sodding.jpg', 'Sodding1.jpg'];
     setGalleryItems(
-      array.map((picture, index) => (
-        <GalleryItem active={index === 0 ? 'active' : ''} photoUrl={picture} />
+      images.map((picture, index) => (
+        <GalleryItem
+          key={index}
+          active={index === 0 ? 'active' : ''}
+          photoUrl={picture}
+        />
       ))
     );
     setGalleryIndicators(
-      array.map((picture, index) => (
+      images.map((picture, index) => (
         <button
+          key={index}
           type='button'
           data-bs-target='#galleryCarousel'
           data-bs-slide-to={index}
@@ -61,7 +75,9 @@ const GalleryItem = ({ active, photoUrl }) => {
     <div className={`carousel-item ${active}`}>
       <div
         className='overlay-image'
-        style={{ backgroundImage: `url(${photoUrl})` }}
+        style={{
+          backgroundImage: `url(${photoUrl})`,
+        }}
       ></div>
     </div>
   );
