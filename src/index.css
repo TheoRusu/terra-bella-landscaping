@@ -21,3 +21,7 @@ code {
 a {
   color: black;
 }
+
+.form-control {
+  border-width: 1.35px;
+}
