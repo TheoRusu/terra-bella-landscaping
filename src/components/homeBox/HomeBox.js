@@ -7,6 +7,19 @@ import { BsInstagram, BsTelephone } from 'react-icons/bs';
 import Navbar from '../navbar/Navbar';
 // import asda from '../../../public/';
 
+// const contentful = require('contentful');
+
+// const client = contentful.createClient({
+//   space: 'm7ozlh62clnq',
+//   environment: 'master', // defaults to 'master' if not set
+//   accessToken: 'gwmJOH-kM8obZAlW1N0lpxyEOOiTkVMrk0f7fu0DrcI',
+// });
+
+// client
+//   .getEntry('58nDFiaXeGqCEry7MmkCzn')
+//   .then((entry) => console.log(entry))
+//   .catch(console.error);
+
 const HomeBox = () => {
   // const [navHeight, setNavHeight] = useState(0);
   // const ref = useRef(null);
@@ -21,12 +34,6 @@ const HomeBox = () => {
   // };
   return (
     <>
-      <Navbar
-      // navHeight={navHeight}
-      // setNavHeight={setNavHeight}
-      // ref={ref}
-      // onLoad={onNavLoad}
-      />
       <div className='container-xxl g-0'>
         <div className='row g-0' id='home'>
           <div className='col mb-5'>

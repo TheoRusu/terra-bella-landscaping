@@ -18,6 +18,6 @@
   cursor: pointer;
 }
 
-.nav-item > .active {
+.active {
   border-bottom: 1px solid white;
 }
