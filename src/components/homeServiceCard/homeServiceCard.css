@@ -5,3 +5,8 @@
 .textBoxBackground {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+.card:hover img {
+  filter: brightness(65%);
+  transition: filter 0.5s ease; /* Adjust the duration and timing function as needed */
+}

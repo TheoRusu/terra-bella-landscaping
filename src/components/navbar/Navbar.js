@@ -1,11 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 // import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import './navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-const Navbar = (props) => {
+const Navbar = () => {
+  const { pathname } = useLocation();
+  const navLinkClass = 'nav-item nav-link text-nowrap';
+
   return (
-    <nav className='navbar navbar-expand-md navbar-dark'>
+    <nav className='navbar navbar-expand-md navbar-dark top-navbar'>
       <div className='container-xxl'>
         <div className='d-flex'>
           <Link className='navbar-brand g-0' to='/'>
@@ -25,28 +28,49 @@ const Navbar = (props) => {
           </button>
         </div>
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-          <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
-            <li className='nav-item'>
-              <Link className='nav-link text-nowrap active' to='/'>
-                Home
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link className={'nav-link text-nowrap'} to='/services'>
-                Services
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link className={'nav-link text-nowrap'} to={'/gallery'}>
-                Gallery
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link className={'nav-link text-nowrap'} to={'/contact'}>
-                Contact
-              </Link>
-            </li>
-          </ul>
+          <div className='navbar-nav ms-auto mb-2 mb-lg-0'>
+            <Link
+              className={
+                pathname === '/' ? `${navLinkClass} active` : `${navLinkClass}`
+              }
+              to='/'
+            >
+              Home
+            </Link>
+
+            <Link
+              className={
+                pathname === '/services'
+                  ? `${navLinkClass} active`
+                  : `${navLinkClass}`
+              }
+              to='/services'
+            >
+              Services
+            </Link>
+
+            <Link
+              className={
+                pathname === '/gallery'
+                  ? `${navLinkClass} active`
+                  : `${navLinkClass}`
+              }
+              to={'/gallery'}
+            >
+              Gallery
+            </Link>
+
+            <Link
+              className={
+                pathname === '/contact'
+                  ? `${navLinkClass} active`
+                  : `${navLinkClass}`
+              }
+              to={'/contact'}
+            >
+              Contact
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

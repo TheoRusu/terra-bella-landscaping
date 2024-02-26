@@ -5,30 +5,44 @@ import Services from './pages/Services';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Navbar from './components/navbar/Navbar';
-import Sodding from './pages/ServicePages/Sodding';
-import Interlocking from './pages/ServicePages/Interlocking';
-import Planting from './pages/ServicePages/Planting';
-import RetainingWall from './pages/ServicePages/RetainingWall';
-import FrenchDrainage from './pages/ServicePages/FrenchDrainage';
-import DecksFences from './pages/ServicePages/DecksFences';
+import Footer from './components/footer/Footer';
+import { useQuery } from '@apollo/client';
+import { GET_SERVICES } from './queries/Queries';
+import LoadingScreen from './components/loadingScreen/LoadingScreen';
+import { generateServiceLink } from './helperFunctions/HelperFunctions';
+import ServicePage from './pages/ServicePage';
 
 function App() {
+  const { loading, error, data } = useQuery(GET_SERVICES);
+
+  if (loading) return <LoadingScreen />;
+  if (error) return <p>Error :(</p>;
+
+  const services = data.servicesCollection.items;
+
   return (
-    <>
+    <div className='d-flex flex-column min-vh-100'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/services' element={<Services />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/sodding' element={<Sodding />} />
-        <Route path='/interlocking' element={<Interlocking />} />
-        <Route path='/planting' element={<Planting />} />
-        <Route path='/retaining-wall' element={<RetainingWall />} />
-        <Route path='/french-drainage' element={<FrenchDrainage />} />
-        <Route path='/decks-fences' element={<DecksFences />} />
+        {services.map((item, index) => (
+          <Route
+            key={index}
+            path={generateServiceLink(item.serviceName)}
+            element={
+              <ServicePage
+                title={item.serviceName}
+                text={item.servicePageParagraph}
+              />
+            }
+          />
+        ))}
       </Routes>
-    </>
+      <Footer />
+    </div>
   );
 }
 

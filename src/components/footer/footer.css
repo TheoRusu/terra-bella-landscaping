@@ -1,0 +1,9 @@
+.footer {
+  font-size: larger;
+  background-color: black;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+}

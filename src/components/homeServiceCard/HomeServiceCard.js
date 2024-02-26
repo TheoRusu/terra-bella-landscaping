@@ -2,12 +2,12 @@ import React from 'react';
 import './homeServiceCard.css';
 import { Link } from 'react-router-dom';
 
-const HomeServiceCard = (props) => {
+const HomeServiceCard = ({ title, serviceLink, image }) => {
   return (
-    <div className='card text-center pointer'>
-      <Link to={props.serviceLink}>
+    <div className='card text-center pointer hover-background'>
+      <Link to={serviceLink}>
         <img
-          src={require(`../../assets/serviceCards/${props.image}`)}
+          src={image}
           className='card-img rounded'
           alt='...'
           height={'350vh'}
@@ -16,21 +16,13 @@ const HomeServiceCard = (props) => {
         <div className='card-img-overlay textBoxBackground'>
           <h5
             className={
-              props.title === 'Interlocking'
+              title === 'Interlocking'
                 ? 'card-title fw-bold fs-2 mt-2 text-white text-nowrap'
                 : 'card-title fw-bold fs-2 mt-2 text-white text-wrap'
             }
           >
-            {props.title}
+            {title}
           </h5>
-
-          {/* <Link
-          to={props.serviceLink}
-          className='btn btn-dark btn-lg'
-          style={{ marginTop: '55%' }}
-        >
-          Learn More
-        </Link> */}
         </div>
       </Link>
     </div>
