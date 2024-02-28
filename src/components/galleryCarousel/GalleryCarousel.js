@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './galleryCarousel.css';
 import { useQuery } from '@apollo/client';
 import { GET_GALLERY_PHOTOS } from '../../queries/Queries';
+import LoadingScreen from '../loadingScreen/LoadingScreen';
 
 const GalleryCarousel = (props) => {
   const [galleryItems, setGalleryItems] = useState([]);
@@ -35,13 +36,7 @@ const GalleryCarousel = (props) => {
   }, [data]);
 
   if (loading) {
-    return (
-      <div className='d-flex justify-content-center align-items-center'>
-        <div className='spinner-border text-black' role='status'>
-          <span className='visually-hidden'>Loading...</span>
-        </div>
-      </div>
-    );
+    return <LoadingScreen />;
   }
   if (error) {
     return (
@@ -101,12 +96,13 @@ const GalleryCarousel = (props) => {
 const GalleryItem = ({ active, photoUrl }) => {
   return (
     <div className={`carousel-item ${active}`}>
-      <div
+      <img className='d-block w-100' src={photoUrl} alt='Gallery' />
+      {/* <div
         className='overlay-image'
         style={{
           backgroundImage: `url(${photoUrl})`,
         }}
-      ></div>
+      ></div> */}
     </div>
   );
 };
