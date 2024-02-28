@@ -11,13 +11,11 @@ const Services = () => {
   if (loading) return <LoadingScreen />;
   if (error) return <p>Error :</p>;
 
-  console.log(data);
   // Extract images from GraphQL data and convert HEIC to PNG
   const serviceImages = data.servicesCollection.items;
 
   // Function to chunk the services array into rows of 3
   const chunkArray = (arr, size) => {
-    console.log(arr);
     const chunkedArr = [];
     for (let i = 0; i < arr.length; i += size) {
       chunkedArr.push(arr.slice(i, i + size));

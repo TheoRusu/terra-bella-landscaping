@@ -12,7 +12,6 @@ const GalleryCarousel = (props) => {
 
   useEffect(() => {
     if (data && data.galleryPhotosCollection) {
-      console.log(data);
       const images =
         data.galleryPhotosCollection.items[0].photosCollection.items.map(
           (item, index) => ({
@@ -29,7 +28,6 @@ const GalleryCarousel = (props) => {
             active: index === 0 ? 'active' : '',
           })
         );
-      console.log(images);
       setGalleryItems(images);
       setGalleryIndicators(indicators);
     }
