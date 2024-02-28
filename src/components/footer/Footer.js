@@ -11,8 +11,8 @@ const Footer = () => {
             <div className='d-flex mx-auto'>
               <a href='tel: 6477675432' className='footer-link mx-4'>
                 <div className='d-flex my-2'>
-                  <FiPhone className='my-auto' size={25} />
-                  <h4 className='my-auto d-none d-sm-block'>
+                  <FiPhone className='my-auto' size={35} />
+                  <h4 className='my-auto d-none d-md-block'>
                     &nbsp;(647) 767-5432
                   </h4>
                 </div>
@@ -22,8 +22,8 @@ const Footer = () => {
                 className='footer-link mx-4'
               >
                 <div className='d-flex my-2'>
-                  <FiMail className='my-auto' size={25} />
-                  <h4 className='my-auto d-none d-sm-block'>
+                  <FiMail className='my-auto' size={35} />
+                  <h4 className='my-auto d-none d-md-block'>
                     &nbsp;terrabelladreamscape@gmail.com
                   </h4>
                 </div>
@@ -33,8 +33,8 @@ const Footer = () => {
                 className='footer-link mx-4'
               >
                 <div className='d-flex my-2'>
-                  <FiInstagram className='my-auto' size={25} />
-                  <h4 className='my-auto d-none d-sm-block'>
+                  <FiInstagram className='my-auto' size={35} />
+                  <h4 className='my-auto d-none d-md-block'>
                     &nbsp;terrabella.landscaping
                   </h4>
                 </div>
