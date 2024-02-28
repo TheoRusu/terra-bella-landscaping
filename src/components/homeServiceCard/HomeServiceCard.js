@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const HomeServiceCard = ({ title, serviceLink, image }) => {
   return (
-    <div className='card text-center pointer hover-background'>
+    <div className='card text-center pointer hover-background m-1'>
       <Link to={serviceLink}>
         <img
           src={image}
