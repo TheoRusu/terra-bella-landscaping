@@ -31,7 +31,7 @@ const Home = () => {
             src={logo}
             width={'350px'}
             height={'300px'}
-            className='mx-auto mt-5 rounded-circle'
+            className='mx-auto mt-5 rounded'
             alt='logo'
           />
           <div className='mx-auto'>
