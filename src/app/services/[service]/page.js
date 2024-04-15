@@ -1,5 +1,6 @@
 import { GET_SERVICES } from '@/app/_api/_queries/queries';
 import { getData } from '@/app/_api/graphql-client';
+import { generateServiceLink } from '@/app/_helpers/helpers';
 import React from 'react';
 
 export async function generateStaticParams() {

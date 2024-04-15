@@ -5,7 +5,7 @@ import './serviceCard.css';
 const ServiceCard = ({ title, serviceLink, image }) => {
   return (
     <div className='card text-center pointer hover-background m-1'>
-      <Link href={'/services' + serviceLink}>
+      <Link href={'/services' + '/' + serviceLink}>
         <img
           src={image}
           className='card-img rounded'

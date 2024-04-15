@@ -2,11 +2,7 @@ import React from 'react';
 import { GET_SERVICES } from '../_api/_queries/queries';
 import ServiceCard from '../_components/serviceCard/ServiceCard';
 import { getData } from '../_api/graphql-client';
-
-const generateServiceLink = (title) => {
-  // Convert title to lowercase and replace spaces with hyphens
-  return `/${title.toLowerCase().replace(/\s+/g, '-')}`;
-};
+import { generateServiceLink } from '../_helpers/helpers';
 
 const chunkArray = (arr, size) => {
   const chunkedArr = [];
