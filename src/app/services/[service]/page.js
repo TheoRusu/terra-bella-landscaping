@@ -7,7 +7,7 @@ export async function generateStaticParams() {
   const res = await getData(GET_SERVICES);
 
   return res.servicesCollection.items.map((serviceItem) => ({
-    service: serviceItem.serviceName,
+    service: generateServiceLink(serviceItem.serviceName),
   }));
 }
 
