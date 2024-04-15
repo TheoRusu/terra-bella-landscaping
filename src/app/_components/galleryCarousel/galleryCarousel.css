@@ -1,0 +1,28 @@
+.carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.carousel-item video {
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  height: 60vh;
+  overflow: hidden;
+  z-index: 1 !important;
+}
+
+.carousel-item video::-webkit-media-controls {
+  z-index: 1 !important; /* Ensure video controls appear above the carousel controls */
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  z-index: 5 !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  width: 80%;
+}
