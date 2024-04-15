@@ -52,14 +52,7 @@ const GalleryItem = ({ active, url }) => {
 
   return (
     <div className={`carousel-item ${active}`}>
-      {isVideo ? (
-        <video className='d-block w-100' controls>
-          <source src={url} type='video/mp4' />
-          Your browser does not support the video tag.
-        </video>
-      ) : (
-        <img className='d-block w-100' src={url} alt='Gallery' />
-      )}
+      <img className='d-block w-100' src={url} alt='Gallery' loading='lazy' />
     </div>
   );
 };

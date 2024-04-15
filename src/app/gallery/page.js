@@ -5,7 +5,6 @@ import { getData } from '../_api/graphql-client';
 
 const Page = async () => {
   const res = await getData(GET_GALLERY_PHOTOS);
-  // console.log(res.galleryPhotosCollection.items[0].photosCollection.items);
   const images =
     res.galleryPhotosCollection.items[0].photosCollection.items.map(
       (item, index) => ({

@@ -3,14 +3,13 @@ import Link from 'next/link';
 import './serviceCard.css';
 
 const ServiceCard = ({ title, serviceLink, image }) => {
-  console.log(serviceLink);
   return (
     <div className='card text-center pointer hover-background m-1'>
       <Link href={'/services' + serviceLink}>
         <img
           src={image}
           className='card-img rounded'
-          alt='...'
+          alt='service'
           height={'350vh'}
           style={{ borderRadius: '0', objectFit: 'cover' }}
         />

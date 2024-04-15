@@ -38,8 +38,6 @@ const Page = async ({ params }) => {
     ? currentService.servicePageImagesCollection.items
     : [];
 
-  console.log(serviceImages);
-
   return (
     <div className='container'>
       <div className='row justify-content-center text-center'>
@@ -52,13 +50,14 @@ const Page = async ({ params }) => {
       <div className='row justify-content-center mt-5'>
         {serviceImages.map((serviceImage, index) => {
           return (
-            <div className='col-12 col-md-4'>
+            <div className='col-12 col-md-4' key={index}>
               <img
                 src={serviceImage.url}
                 height={'350vh'}
                 className='w-100 rounded my-1'
                 style={{ objectFit: 'cover' }}
                 key={index}
+                alt='service'
               />
             </div>
           );
