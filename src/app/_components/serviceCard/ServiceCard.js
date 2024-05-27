@@ -2,7 +2,6 @@
 import React from 'react';
 import Link from 'next/link';
 import './serviceCard.css';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Image from 'next/image';
 
 const ServiceCard = ({ title, serviceLink, image }) => {
