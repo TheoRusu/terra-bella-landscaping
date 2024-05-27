@@ -18,6 +18,7 @@ const Navbar = () => {
             <Image
               className='img-fluid'
               src={logo}
+              priority={true}
               alt='logo'
               style={{ width: '20%' }}
             />

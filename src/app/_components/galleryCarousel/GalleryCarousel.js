@@ -1,5 +1,6 @@
 import React from 'react';
 import './galleryCarousel.css';
+import Image from 'next/image';
 
 const GalleryCarousel = ({ galleryIndicators, galleryItems }) => {
   return (
@@ -52,7 +53,12 @@ const GalleryItem = ({ active, url }) => {
 
   return (
     <div className={`carousel-item ${active}`}>
-      <img className='d-block w-100' src={url} alt='Gallery' loading='lazy' />
+      <Image
+        className='d-block w-100 next-img'
+        src={url}
+        fill={true}
+        alt='Gallery'
+      />
     </div>
   );
 };

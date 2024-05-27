@@ -1,16 +1,20 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import './serviceCard.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Image from 'next/image';
 
 const ServiceCard = ({ title, serviceLink, image }) => {
   return (
     <div className='card text-center pointer hover-background m-1'>
       <Link href={'/services' + '/' + serviceLink}>
-        <img
+        <Image
           src={image}
           className='card-img rounded'
           alt='service'
-          height={'350vh'}
+          height={350}
+          width={396}
           style={{ borderRadius: '0', objectFit: 'cover' }}
         />
         <div className='card-img-overlay textBoxBackground'>
