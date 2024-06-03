@@ -14,8 +14,15 @@ const Page = async () => {
           <p>{mainParagraph}</p>
 
           <p className='fw-bold mt-5'>Owner: Matthew Tawfiq</p>
-          <p className='fw-bold'>Phone: (647) 767-5432</p>
-          <p className='fw-bold'>Email: terrabelladreamscape@gmail.com</p>
+          <p className='fw-bold'>
+            Phone: <a href='tel: 6477675432'>(647) 767-5432</a>
+          </p>
+          <p className='fw-bold'>
+            Email:{' '}
+            <a href='terrabelladreamscape@gmail.com'>
+              terrabelladreamscape@gmail.com
+            </a>
+          </p>
           <p className='fw-bold mt-5 text-decoration-underline'>
             Hours of Operation (EST)
           </p>

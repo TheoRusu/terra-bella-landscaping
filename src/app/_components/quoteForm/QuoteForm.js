@@ -11,9 +11,57 @@ const QuoteForm = () => {
   const [description, setDescription] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
   const [isFail, setIsFail] = useState(false);
+  const [failMessage, setFailMessage] = useState('Try again.');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsFail(false);
+    setIsSuccess(false);
+
+    if (!service) {
+      setFailMessage('Service is required');
+      setIsFail(true);
+      return;
+    }
+    if (!name) {
+      setFailMessage('Name is required');
+      setIsFail(true);
+      return;
+    }
+    if (!email) {
+      setFailMessage('Email is required');
+      setIsFail(true);
+      return;
+    }
+    if (!phone) {
+      setFailMessage('Phone number is required');
+      setIsFail(true);
+      return;
+    }
+    if (!address) {
+      setFailMessage('Address is required');
+      setIsFail(true);
+      return;
+    }
+    if (!description) {
+      setFailMessage('Description is required');
+      setIsFail(true);
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setFailMessage('Invalid email format');
+      setIsFail(true);
+      return;
+    }
+
+    const phoneRegex = /^\d{10}$|^\d{3}-\d{3}-\d{4}$/;
+    if (!phoneRegex.test(phone)) {
+      setFailMessage('Invalid phone number format');
+      setIsFail(true);
+      return;
+    }
 
     const templateParams = {
       service: service,
@@ -51,7 +99,7 @@ const QuoteForm = () => {
       )}
       {isFail && (
         <div className='alert alert-danger' role='alert'>
-          Try again.
+          {failMessage}
         </div>
       )}
 
@@ -126,7 +174,7 @@ const QuoteForm = () => {
       </div>
       <button
         style={{ width: '150px' }}
-        className='btn btn-dark my-2'
+        className='btn btn-lg btn-dark my-2'
         onClick={handleSubmit}
       >
         Submit
