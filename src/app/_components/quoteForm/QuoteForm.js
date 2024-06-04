@@ -158,6 +158,7 @@ const QuoteForm = () => {
           <option value='Retaining Wall'>Retaining Wall</option>
           <option value='French Drainage'>French Drainage</option>
           <option value='Decks and Fences'>Decks and Fences</option>
+          <option value='Powerwashing'>Powerwashing</option>
         </select>
         <label>Service</label>
       </div>

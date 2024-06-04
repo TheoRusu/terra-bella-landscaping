@@ -17,7 +17,11 @@ const parseServiceTitle = (serviceLink) => {
 
   // Capitalize each word and join them with a space
   const title = parts
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .map((part) =>
+      part !== 'and'
+        ? part.charAt(0).toUpperCase() + part.slice(1)
+        : part.slice(0)
+    )
     .join(' ');
 
   return title;

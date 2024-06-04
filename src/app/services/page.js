@@ -20,25 +20,21 @@ const Page = async () => {
   // Function to chunk the services array into rows of 3
 
   // Chunk the services array into rows of 3
-  const rowsOfThree = chunkArray(serviceItems, 3);
+  // const rowsOfThree = chunkArray(serviceItems, 3);
 
   return (
     <div className='container pb-5'>
       <div className='row text-center'>
         <h1 className='my-5 fw-bold'>Services</h1>
         <h4 className='mb-5'>Click on service to see more</h4>
-        <div>
-          {rowsOfThree.map((row, rowIndex) => (
-            <div className='row g-0' key={rowIndex}>
-              {row.map((item, index) => (
-                <div className='col-md' key={index}>
-                  <ServiceCard
-                    title={item.serviceName}
-                    serviceLink={generateServiceLink(item.serviceName)}
-                    image={item.serviceCardImage.url}
-                  />
-                </div>
-              ))}
+        <div className='row g-0 justify-content-center'>
+          {serviceItems.map((item, index) => (
+            <div className='col-md-4' key={index}>
+              <ServiceCard
+                title={item.serviceName}
+                serviceLink={generateServiceLink(item.serviceName)}
+                image={item.serviceCardImage.url}
+              />
             </div>
           ))}
         </div>
