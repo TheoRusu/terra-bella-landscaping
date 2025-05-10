@@ -1,8 +1,8 @@
-import React from 'react';
-import { GET_SERVICES } from '../_api/_queries/queries';
-import ServiceCard from '../_components/serviceCard/ServiceCard';
-import { getData } from '../_api/graphql-client';
-import { generateServiceLink } from '../_helpers/helpers';
+import React from "react";
+import { GET_SERVICES } from "../_api/_queries/queries";
+import ServiceCard from "../components/serviceCard/ServiceCard";
+import { getData } from "../_api/graphql-client";
+import { generateServiceLink } from "../helpers/helpers";
 
 const chunkArray = (arr, size) => {
   const chunkedArr = [];
@@ -23,13 +23,13 @@ const Page = async () => {
   // const rowsOfThree = chunkArray(serviceItems, 3);
 
   return (
-    <div className='container pb-5'>
-      <div className='row text-center'>
-        <h1 className='my-5 fw-bold'>Services</h1>
-        <h4 className='mb-5'>Click on service to see more</h4>
-        <div className='row g-0 justify-content-center'>
+    <div className="container pb-5">
+      <div className="row text-center">
+        <h1 className="my-5 fw-bold">Services</h1>
+        <h4 className="mb-5">Click on service to see more</h4>
+        <div className="row g-0 justify-content-center">
           {serviceItems.map((item, index) => (
-            <div className='col-md-4' key={index}>
+            <div className="col-md-4" key={index}>
               <ServiceCard
                 title={item.serviceName}
                 serviceLink={generateServiceLink(item.serviceName)}
