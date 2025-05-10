@@ -9,11 +9,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center mb-4">
           <div className="font-bold">Terra Bella Landscaping</div>
           <div className="mt-2 md:mt-0">
-            <div className="flex justify-center space-x-4 md:hidden">
-              <Link href="tel:1234567890" aria-label="Phone">
+            <div className="flex justify-center space-x-14 md:hidden">
+              <Link href="tel:6477675432" aria-label="Phone">
                 <FiPhone className="h-5 w-5" />
               </Link>
-              <Link href="mailto:email@example.com" aria-label="Email">
+              <Link
+                href="mailto:terrabelladreamscape@gmail.com"
+                aria-label="Email"
+              >
                 <FiMail className="h-5 w-5" />
               </Link>
               <Link
@@ -26,14 +29,14 @@ export default function Footer() {
               </Link>
             </div>
             <div className="hidden md:flex space-x-6 text-sm">
-              <Link href="tel:1234567890" className="hover:text-gray-300">
-                (123) 456‑7890
+              <Link href="tel:6477675432" className="hover:text-gray-300">
+                (647) 767‑5432
               </Link>
               <Link
-                href="mailto:email@example.com"
+                href="mailto:terrabelladreamscape@gmail.com"
                 className="hover:text-gray-300"
               >
-                email@example.com
+                terrabelladreamscape@gmail.com
               </Link>
               <Link
                 href="https://instagram.com/terrabellalandscaping"

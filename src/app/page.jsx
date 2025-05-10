@@ -9,7 +9,7 @@ export default async function Home() {
     <main className="px-4 py-12 max-w-screen-xl mx-auto">
       {/* Hero Section */}
       <section className="relative h-[500px]">
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-4 bg-[url('/HeroImage.png')] bg-cover bg-right md:bg-center">
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-4 bg-[url('/HeroImage.png')] bg-cover bg-right md:bg-center rounded-2xl">
           <h1 className="text-4xl md:text-5xl font-bold text-white">
             Terra Bella Landscaping
           </h1>

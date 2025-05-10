@@ -1,7 +1,5 @@
 import React from "react";
 import GalleryCarousel from "../components/galleryCarousel/GalleryCarousel";
-import { GET_GALLERY_PHOTOS } from "../_api/_queries/queries";
-import { getData } from "../_api/graphql-client";
 
 const Page = async () => {
   const res = await getData(GET_GALLERY_PHOTOS);

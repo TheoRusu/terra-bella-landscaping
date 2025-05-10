@@ -12,9 +12,10 @@ export default function Navbar() {
         <div className="flex items-center">
           <Image
             src="/TerrabellaLandscapingLogo.png"
-            alt="Landscaping Co. Logo"
+            alt="Terra Bella Landscaping Co. Logo"
             width={61}
             height={50}
+            quality={100}
           />
         </div>
       </Link>
