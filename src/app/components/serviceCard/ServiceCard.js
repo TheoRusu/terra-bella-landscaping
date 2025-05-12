@@ -30,3 +30,32 @@ const ServiceCard = ({ title, image }) => {
 };
 
 export default ServiceCard;
+
+// import Script from 'next/script';
+
+// export const metadata = {
+//   title: 'Services',
+//   description: 'Lawn sodding, garden planting, interlocking paving. Detailed service descriptions and images.',
+//   openGraph: { title: 'Services', description: 'Lawn sodding, planting, interlocking paving in Newmarket & GTA.', url: 'https://www.terrabellalandscaping.ca/services' },
+//   alternates: { canonical: 'https://www.terrabellalandscaping.ca/services' }
+// };
+
+// export default function ServicesPage() {
+//   const servicesSchema = {
+//     "@context": "https://schema.org",
+//     "@type": "ItemList",
+//     "itemListElement": [
+//       { "@type": "Service", "name": "Lawn Sodding", "description": "Premium turf installation for instant lawns." },
+//       { "@type": "Service", "name": "Garden Planting", "description": "Flower beds, shrubs, trees with expert planting." },
+//       { "@type": "Service", "name": "Interlocking Paving", "description": "Durable patios, driveways, walkways with interlock." }
+//     ]
+//   };
+//   return (
+//     <>
+//       <Script id="services-jsonld" type="application/ld+json">
+//         {JSON.stringify(servicesSchema)}
+//       </Script>
+//       {/* services grid */}
+//     </>
+//   );
+// }

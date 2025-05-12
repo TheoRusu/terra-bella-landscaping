@@ -1,0 +1,39 @@
+{
+  "services": [
+    {
+      "name": "Sodding",
+      "url": "/sodding",
+      "description": "Install premium sod for an instant, perfectly even lawn that elevates curb appeal."
+    },
+    {
+      "name": "Planting",
+      "url": "/planting",
+      "description": "Expert tree planting to enhance your landscape with healthy, vibrant growth."
+    },
+    {
+      "name": "Interlocking",
+      "url": "/interlocking",
+      "description": "Craft stunning patios and walkways with durable, precision-laid interlocking pavers."
+    },
+    {
+      "name": "Powerwashing",
+      "url": "/powerwashing",
+      "description": "Restore surfaces to like-new condition with high-power washing that removes every stain."
+    },
+    {
+      "name": "Retaining Wall",
+      "url": "/retaining-wall",
+      "description": "Build strong, attractive retaining walls to protect and beautify your sloped terrain."
+    },
+    {
+      "name": "Decks and Fences",
+      "url": "/decks-and-fences",
+      "description": "Design and install custom decks or fences that blend functionality with style."
+    },
+    {
+      "name": "French Drainage",
+      "url": "/french-drainage",
+      "description": "Prevent water issues with expertly installed French drains for reliable yard drainage."
+    }
+  ]
+}

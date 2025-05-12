@@ -29,12 +29,15 @@ export default function Footer() {
               </Link>
             </div>
             <div className="hidden md:flex space-x-6 text-sm">
-              <Link href="tel:6477675432" className="hover:text-gray-300">
+              <Link
+                href="tel:6477675432"
+                className="hover:text-gray-300 underline"
+              >
                 (647) 767‑5432
               </Link>
               <Link
                 href="mailto:terrabelladreamscape@gmail.com"
-                className="hover:text-gray-300"
+                className="hover:text-gray-300 underline"
               >
                 terrabelladreamscape@gmail.com
               </Link>
@@ -42,7 +45,7 @@ export default function Footer() {
                 href="https://instagram.com/terrabellalandscaping"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-300"
+                className="hover:text-gray-300 underline"
               >
                 Instagram
               </Link>
