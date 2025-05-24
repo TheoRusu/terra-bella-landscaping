@@ -12,7 +12,7 @@ export default function GalleryClient({ images }) {
         {images.map((src, i) => (
           <div
             key={i}
-            className="overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+            className="overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
             onClick={() => setSelected(src)}
           >
             <Image
@@ -20,7 +20,7 @@ export default function GalleryClient({ images }) {
               alt={`Gallery ${i + 1}`}
               width={400}
               height={300}
-              className="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
+              className="w-full h-48 object-cover"
             />
           </div>
         ))}

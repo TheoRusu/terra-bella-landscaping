@@ -1,7 +1,9 @@
 import Image from "next/image";
-import QuoteForm from "@/app/components/quoteForm/QuoteForm";
 import Link from "next/link";
 import Script from "next/script";
+import services from "@/app/data/services";
+import QuoteForm from "@/app/components/quoteForm/QuoteForm";
+import ServiceCard from "@/app/components/serviceCard/ServiceCard";
 
 export const metadata = {
   title: "Home",
@@ -42,6 +44,8 @@ export default function HomePage() {
       geoRadius: 50,
     },
   };
+
+  const firstThreeServices = services.services.slice(0, 3);
   return (
     <main className="px-4 py-12 max-w-screen-xl mx-auto">
       {/* Hero Section */}
@@ -70,19 +74,15 @@ export default function HomePage() {
 
       {/* Services Preview */}
       <section className="py-16 bg-white text-center">
-        <div className="grid md:grid-cols-3 justify-evenly gap-8">
-          <div>
-            <div className="text-3xl mb-2">🌱</div>
-            <h3 className="font-semibold">Lawn Sodding</h3>
-          </div>
-          <div>
-            <div className="text-3xl mb-2">🌸</div>
-            <h3 className="font-semibold">Planting</h3>
-          </div>
-          <div>
-            <div className="text-3xl mb-2">🧱</div>
-            <h3 className="font-semibold">Interlocking</h3>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 px-4 gap-8">
+          {firstThreeServices.map((svc) => (
+            <ServiceCard
+              key={svc.url}
+              name={svc.name}
+              url={svc.url}
+              description={svc.description}
+            />
+          ))}
         </div>
         <div className="mt-8">
           <Link href={"/services"} className="text-green-700 hover:underline">
@@ -132,7 +132,7 @@ export default function HomePage() {
       {/* Gallery Preview */}
       <section className="py-16 bg-white text-center">
         <h2 className="text-3xl font-bold mb-10">Our Work</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto  justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto justify-items-center">
           <Image
             src="/HeroImage.png"
             alt="Project 1"
