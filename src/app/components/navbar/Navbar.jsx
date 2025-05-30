@@ -67,33 +67,37 @@ export default function Navbar() {
           menuOpen ? "scale-y-100" : "scale-y-0"
         }`}
       >
-        <Link
-          href="/"
-          className="w-full text-center py-3 hover:bg-gray-800"
-          onClick={() => setMenuOpen(false)}
-        >
-          Home
+        <Link href="/">
+          <span
+            className="block w-full text-center py-3 hover:bg-gray-800"
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </span>
         </Link>
-        <Link
-          href="/services"
-          className="w-full text-center py-3 hover:bg-gray-800"
-          onClick={() => setMenuOpen(false)}
-        >
-          Services
+        <Link href="/services">
+          <span
+            className="block w-full text-center py-3 hover:bg-gray-800"
+            onClick={() => setMenuOpen(false)}
+          >
+            Services
+          </span>
         </Link>
-        <Link
-          href="/gallery"
-          className="w-full text-center py-3 hover:bg-gray-800"
-          onClick={() => setMenuOpen(false)}
-        >
-          Gallery
+        <Link href="/gallery">
+          <span
+            className="block w-full text-center py-3 hover:bg-gray-800"
+            onClick={() => setMenuOpen(false)}
+          >
+            Gallery
+          </span>
         </Link>
-        <Link
-          href="/contact"
-          className="w-full text-center py-3 hover:bg-gray-800"
-          onClick={() => setMenuOpen(false)}
-        >
-          Contact
+        <Link href="/contact">
+          <span
+            className="block w-full text-center py-3 hover:bg-gray-800"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </span>
         </Link>
       </div>
     </nav>
