@@ -4,6 +4,9 @@ import Script from "next/script";
 import services from "@/app/data/services";
 import QuoteForm from "@/app/components/quoteForm/QuoteForm";
 import ServiceCard from "@/app/components/serviceCard/ServiceCard";
+import { fetchGalleryImages } from "@/app/api/contentful";
+import GalleryClient from "@/app/gallery/GalleryImage";
+import HeroSection from "./components/heroSection/HeroSection";
 
 export const metadata = {
   title: "Home",
@@ -17,7 +20,7 @@ export const metadata = {
   alternates: { canonical: "https://www.terrabellalandscaping.ca" },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LandscapingBusiness",
@@ -46,13 +49,17 @@ export default function HomePage() {
   };
 
   const firstThreeServices = services.services.slice(0, 3);
+  const galleryImages = await fetchGalleryImages();
+  const firstThreeImages = galleryImages.slice(0, 3);
+
   return (
     <main className="px-4 py-12 max-w-screen-xl mx-auto">
-      {/* Hero Section */}
       <Script id="ld-json" type="application/ld+json">
         {JSON.stringify(schema)}
       </Script>
-      <section className="relative h-[500px]">
+
+      {/* Hero Section */}
+      {/* <section className="relative h-[500px]">
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-4 bg-[url('/HeroImage.png')] bg-cover bg-right md:bg-center rounded-2xl">
           <h1 className="text-4xl md:text-5xl font-bold text-white">
             Terra Bella Landscaping
@@ -65,9 +72,9 @@ export default function HomePage() {
             Request a Free Quote
           </Link>
         </div>
-      </section>
+      </section> */}
+      <HeroSection />
 
-      {/* Divider */}
       <div className="max-w-screen-xl mx-auto px-8">
         <hr className="border-t border-green-700 my-4" />
       </div>
@@ -91,7 +98,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Divider */}
       <div className="max-w-screen-xl mx-auto px-8">
         <hr className="border-t border-green-700 my-4" />
       </div>
@@ -100,7 +106,6 @@ export default function HomePage() {
         <QuoteForm />
       </section>
 
-      {/* Divider */}
       <div className="max-w-screen-xl mx-auto px-8">
         <hr className="border-t border-green-700 my-4" />
       </div>
@@ -124,7 +129,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Divider */}
       <div className="max-w-screen-xl mx-auto px-8">
         <hr className="border-t border-green-700 my-4" />
       </div>
@@ -132,28 +136,14 @@ export default function HomePage() {
       {/* Gallery Preview */}
       <section className="py-16 bg-white text-center">
         <h2 className="text-3xl font-bold mb-10">Our Work</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto justify-items-center">
-          <Image
-            src="/HeroImage.png"
-            alt="Project 1"
-            className="rounded-2xl shadow object-cover"
-            width={250}
-            height={250}
-          />
-          <Image
-            src="/HeroImage.png"
-            alt="Project 2"
-            className="rounded-2xl shadow object-cover"
-            width={250}
-            height={250}
-          />
-          <Image
-            src="/HeroImage.png"
-            alt="Project 3"
-            className="rounded-2xl shadow object-cover"
-            width={250}
-            height={250}
-          />
+        <div className="grid grid-cols-1 md:grid-cols-3 px-4 gap-8">
+          {firstThreeImages.map((img, i) => (
+            <GalleryClient
+              key={i}
+              src={img.fields.image.fields.file.url}
+              alt={`Project ${i + 1}`}
+            />
+          ))}
         </div>
         <div className="mt-8">
           <Link href="/gallery" className="text-green-700 hover:underline">

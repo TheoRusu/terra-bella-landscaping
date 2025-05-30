@@ -11,7 +11,7 @@ export default function Navbar() {
       <Link href="/">
         <div className="flex items-center">
           <Image
-            src="/TerrabellaLandscapingLogo.png"
+            src="/TerrabellaLandscapingLogo3.png"
             alt="Terra Bella Landscaping Co. Logo"
             width={61}
             height={50}

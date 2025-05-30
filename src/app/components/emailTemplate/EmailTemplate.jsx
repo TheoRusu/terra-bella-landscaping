@@ -1,4 +1,3 @@
-// components/emailTemplate/EmailTemplate.jsx
 import React from "react";
 
 export default function EmailTemplate({
@@ -10,7 +9,6 @@ export default function EmailTemplate({
   details,
 }) {
   return (
-    // ← you must return
     <div style={{ fontFamily: "sans‑serif", lineHeight: "1.5em" }}>
       <h1>New Quote Request</h1>
       <p>

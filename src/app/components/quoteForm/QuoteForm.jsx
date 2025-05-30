@@ -176,6 +176,7 @@ export default function QuoteForm() {
             placeholder="Message / Project Details"
             className={inputClass("details") + " h-32"}
             onChange={handleChange}
+            maxLength={350}
           />
           {errors.details && (
             <p className="text-red-600 mt-1">{errors.details}</p>

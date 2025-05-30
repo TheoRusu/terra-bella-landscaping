@@ -25,8 +25,8 @@ export async function sendQuote(formData) {
   const { fullName, address, email, phone, service, details } = result.data;
 
   const { data: resp, error } = await resend.emails.send({
-    from: "Acme <onboarding@resend.dev>",
-    to: ["theoterrabella@gmail.com"],
+    from: process.env.RESEND_FROM_ADDRESS,
+    to: [process.env.RESEND_TO_ADDRESS],
     subject: `Quote Request - ${service} from ${fullName}`,
     react: (
       <EmailTemplate
@@ -39,5 +39,5 @@ export async function sendQuote(formData) {
     throw new Error("Email send error: " + JSON.stringify(error));
   }
 
-  return { success: true, resp }; // only plain JSON
+  return { success: true, resp };
 }
