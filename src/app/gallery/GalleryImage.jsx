@@ -9,6 +9,7 @@ export default function GalleryClient({ src, alt }) {
 
   return (
     <>
+      {/* Gallery Preview Image */}
       <div
         className="overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
         onClick={() => setSelected(true)}
@@ -31,6 +32,7 @@ export default function GalleryClient({ src, alt }) {
         </div>
       </div>
 
+      {/* Full Screen Image */}
       {selected && (
         <div
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"

@@ -15,7 +15,9 @@ const QuoteSchema = z.object({
 });
 
 export async function sendQuote(formData) {
-  const data = Object.fromEntries(formData); // plain object
+  const data = Object.fromEntries(formData);
+
+  // zod parse
   const result = QuoteSchema.safeParse(data);
   if (!result.success) {
     throw new Error(
@@ -24,6 +26,7 @@ export async function sendQuote(formData) {
   }
   const { fullName, address, email, phone, service, details } = result.data;
 
+  // send email
   const { data: resp, error } = await resend.emails.send({
     from: process.env.RESEND_FROM_ADDRESS,
     to: [process.env.RESEND_TO_ADDRESS],

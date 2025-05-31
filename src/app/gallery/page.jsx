@@ -22,11 +22,7 @@ export default async function GalleryPage() {
       <h1 className="text-3xl font-bold mb-6 text-center">Gallery</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 px-4 gap-8">
         {images.map((img, i) => (
-          <GalleryClient
-            key={i}
-            src={img.fields.image.fields.file.url}
-            alt={`Gallery ${i + 1}`}
-          />
+          <GalleryClient key={i} src={img.src} alt={img.alt} />
         ))}
       </div>
     </main>
