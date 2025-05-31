@@ -59,28 +59,16 @@ export default async function HomePage() {
       </Script>
 
       {/* Hero Section */}
-      {/* <section className="relative h-[500px]">
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-4 bg-[url('/HeroImage.png')] bg-cover bg-right md:bg-center rounded-2xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
-            Terra Bella Landscaping
-          </h1>
-          <p className="text-xl text-white mt-4">Your Ultimate Dreamscape</p>
-          <Link
-            href={"#quote"}
-            className="mt-6 bg-green-600 text-white px-6 py-3 rounded text-lg hover:bg-green-700"
-          >
-            Request a Free Quote
-          </Link>
-        </div>
-      </section> */}
       <HeroSection />
 
+      {/* Dividing Line */}
       <div className="max-w-screen-xl mx-auto px-8">
         <hr className="border-t border-green-700 my-4" />
       </div>
 
       {/* Services Preview */}
       <section className="py-16 bg-white text-center">
+        <h2 className="text-3xl font-bold mb-10">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 px-4 gap-8">
           {firstThreeServices.map((svc) => (
             <ServiceCard
@@ -98,14 +86,17 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Dividing Line */}
       <div className="max-w-screen-xl mx-auto px-8">
         <hr className="border-t border-green-700 my-4" />
       </div>
 
+      {/* Quote Form */}
       <section id="quote" className="bg-white py-16 px-6">
         <QuoteForm />
       </section>
 
+      {/* Dividing Line */}
       <div className="max-w-screen-xl mx-auto px-8">
         <hr className="border-t border-green-700 my-4" />
       </div>
@@ -129,6 +120,7 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Dividing Line */}
       <div className="max-w-screen-xl mx-auto px-8">
         <hr className="border-t border-green-700 my-4" />
       </div>
@@ -138,11 +130,7 @@ export default async function HomePage() {
         <h2 className="text-3xl font-bold mb-10">Our Work</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 px-4 gap-8">
           {firstThreeImages.map((img, i) => (
-            <GalleryClient
-              key={i}
-              src={img.fields.image.fields.file.url}
-              alt={`Project ${i + 1}`}
-            />
+            <GalleryClient key={i} src={img.src} alt={img.alt} />
           ))}
         </div>
         <div className="mt-8">

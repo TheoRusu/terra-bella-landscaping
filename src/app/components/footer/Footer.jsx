@@ -9,6 +9,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center mb-4">
           <div className="font-bold">Terra Bella Landscaping</div>
           <div className="mt-2 md:mt-0">
+            {/* Mobile View */}
             <div className="flex justify-center space-x-14 md:hidden">
               <Link href="tel:6477675432" aria-label="Phone">
                 <FiPhone className="h-5 w-5" />
@@ -28,6 +29,7 @@ export default function Footer() {
                 <FiInstagram className="h-5 w-5" />
               </Link>
             </div>
+            {/* Desktop View */}
             <div className="hidden md:flex space-x-6 text-sm">
               <Link
                 href="tel:6477675432"
