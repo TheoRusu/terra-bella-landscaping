@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import services from "@/app/data/services";
@@ -9,12 +8,15 @@ import GalleryClient from "@/app/gallery/GalleryImage";
 import HeroSection from "./components/heroSection/HeroSection";
 
 export const metadata = {
-  title: "Home",
+  title:
+    "Home | Landscaping Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington",
   description:
-    "Preview of services, gallery, free quote form, transparent pricing, hardworking crew.",
+    "Terra Bella Landscaping home page: landscaping services preview, image gallery, free quote form. Serving Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington. Transparent pricing. Hardworking crew.",
   openGraph: {
-    title: "Home",
-    description: "Free quotes. Transparent pricing. Serving Newmarket & GTA.",
+    title:
+      "Home | Landscaping Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington",
+    description:
+      "Landscaping service overview and free quotes. Serving Toronto, Newmarket, and all major GTA cities. Transparent pricing. Hardworking crew.",
     url: "https://www.terrabellalandscaping.ca",
   },
   alternates: { canonical: "https://www.terrabellalandscaping.ca" },

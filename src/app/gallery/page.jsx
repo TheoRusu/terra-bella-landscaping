@@ -3,12 +3,15 @@ import GalleryClient from "./GalleryImage";
 import { fetchGalleryImages } from "../api/contentful";
 
 export const metadata = {
-  title: "Gallery",
+  title:
+    "Gallery | Landscaping Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington",
   description:
-    "Portfolio of completed sodding, planting, interlocking projects.",
+    "Terra Bella Landscaping portfolio: completed landscaping projects including sodding, planting, interlocking. Serving Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington.",
   openGraph: {
-    title: "Gallery",
-    description: "View Terra Bella Landscaping project portfolio.",
+    title:
+      "Gallery | Landscaping Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington",
+    description:
+      "View completed landscaping projects by Terra Bella Landscaping. Serving Toronto, Newmarket, and full Greater Toronto Area.",
     url: "https://www.terrabellalandscaping.ca/gallery",
   },
   alternates: { canonical: "https://www.terrabellalandscaping.ca/gallery" },

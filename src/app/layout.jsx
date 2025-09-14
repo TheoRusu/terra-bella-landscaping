@@ -12,22 +12,46 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   title: {
-    default: "Terra Bella Landscaping",
-    template: "%s | Terra Bella Landscaping",
+    default:
+      "Terra Bella Landscaping Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington | Terra Bella Landscaping",
+    template:
+      "%s | Terra Bella Landscaping Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington | Terra Bella Landscaping",
   },
   description:
-    "Terra Bella Landscaping: transparent pricing, on‑time delivery, hardworking crew serving Newmarket, Ontario and GTA.",
+    "Terra Bella Landscaping provides landscaping services in Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington. Transparent pricing, on‑time delivery, hardworking crew.",
   keywords: [
     "landscaping Newmarket",
     "lawn sodding",
     "patio interlocking",
     "garden planting",
     "terra bella landscaping",
+    "landscaping Toronto",
+    "landscaping Mississauga",
+    "landscaping Brampton",
+    "landscaping Vaughan",
+    "landscaping Markham",
+    "landscaping Richmond Hill",
+    "landscaping Oakville",
+    "landscaping Burlington",
+    "landscaping Milton",
+    "landscaping Halton Hills",
+    "landscaping Caledon",
+    "landscaping Aurora",
+    "landscaping King",
+    "landscaping Whitchurch-Stouffville",
+    "landscaping East Gwillimbury",
+    "landscaping Georgina",
+    "landscaping Pickering",
+    "landscaping Ajax",
+    "landscaping Whitby",
+    "landscaping Oshawa",
+    "landscaping Clarington",
   ],
   openGraph: {
-    title: "Terra Bella Landscaping",
+    title:
+      "Landscaping Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington | Terra Bella Landscaping",
     description:
-      "Transparent pricing. On‑time delivery. Hardworking crew. Serving Newmarket, Ontario and GTA.",
+      "Landscaping services in Toronto and GTA: transparent pricing, on‑time delivery, hardworking crew. Serving Newmarket, Mississauga, Brampton, Vaughan, and more.",
     url: "https://www.terrabellalandscaping.ca",
     siteName: "Terra Bella Landscaping",
     images: [

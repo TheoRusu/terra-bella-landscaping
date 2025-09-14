@@ -4,13 +4,15 @@ import Link from "next/link";
 import QuoteForm from "@/app/components/quoteForm/QuoteForm";
 
 export const metadata = {
-  title: "Contact",
+  title:
+    "Contact | Landscaping Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington",
   description:
-    "Owner info, contact details, hours of operation for Terra Bella Landscaping.",
+    "Contact Terra Bella Landscaping: owner details, hours of operation, and service coverage across Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington.",
   openGraph: {
-    title: "Contact",
+    title:
+      "Contact | Landscaping Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Halton Hills, Caledon, Aurora, Newmarket, King, Whitchurch-Stouffville, East Gwillimbury, Georgina, Pickering, Ajax, Whitby, Oshawa, Clarington",
     description:
-      "Get a free quote from Terra Bella Landscaping in Newmarket & GTA.",
+      "Request a free quote from Terra Bella Landscaping. Serving Newmarket, Toronto, and full GTA region with transparent pricing and efficient communication.",
     url: "https://www.terrabellalandscaping.ca/contact",
   },
   alternates: { canonical: "https://www.terrabellalandscaping.ca/contact" },
